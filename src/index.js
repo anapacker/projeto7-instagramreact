@@ -6,10 +6,10 @@ import Mobile from "./Mobile";
 function App() {
     return (
         <div>
-            {/* <Navbar />
+            <Navbar />
             <Corpo />
-            <Mobile /> */}
-            hello world
+            <Mobile />
+
         </div>
     )
 }

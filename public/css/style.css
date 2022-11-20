@@ -66,3 +66,82 @@ body{
     border: 1px
 }
 
+
+
+
+/* COMEÇO INSTAGRAM MOBILE */
+
+@media (max-width: 935px) {
+    .caixa-direita {
+        display: none;
+     }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+     }
+    .borda {
+        width: 1px;
+        height: 22px;
+        background: #dbdbdb;
+     }
+    }
+    .barra-topo-mobile {
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        border-bottom: 1px solid #dbdbdb;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+    }
+      
+    @media (max-width: 614px) {
+    .topo-mobile {
+        box-shadow: none;
+    }
+    .menu {
+        display: none;
+    }
+      
+    .container-principal{
+        width: 100%;
+        margin-top: none;
+    }
+    .barra-stories ion-icon[name="chevron-forward-circle"] {
+        display: none;
+    }
+    
+    .barra-stories {
+        box-shadow: none;
+        margin-top: none;
+        margin-bottom: none;
+    }
+    .menu-mobile {
+        width: 100%;
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0px;
+        z-index: 2;
+        left: 0px;
+        display: flex;
+        justify-content: space-between;
+        /* padding: 10px 20px; */
+     }
+    }
+      
+    @media (min-width: 614px) {
+    .barra-topo-mobile {
+        display: none;
+    }
+    .menu-mobile {
+        display: none;
+    }
+    
+    }
