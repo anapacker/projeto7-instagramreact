@@ -12,13 +12,15 @@ import juninho15261 from "./assets/juninho15261.jpeg"
 
 export default function Stories() {
     return (
-        <div className="stories">
+        <div className="barra-stories">
             <ion-icon className="seta" name="chevron-forward-circle"></ion-icon>
 
             <ul className="stories">
                 <StorieMap />
 
             </ul>
+
+
         </div>
     )
 }
@@ -37,8 +39,15 @@ let arrayUsuariosStories = [{ img: cindyBttrfly, user: "cindyBttrfly" },
 function StorieMap() {
     return (
         arrayUsuariosStories.map((a) => {
-            return <li><a href="https://instagram.com"><img src={a.img} />{a.user}</a></li>
+            return <li>
+                <a href="https://instagram.com">
+                    <img src={a.img} />
+                    <p className="username">{a.user}</p>
+                </a>
+            </li>
         })
     )
 }
+
+
 

@@ -82,17 +82,21 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: 0 auto;
+    margin-top: 88px;
 }
 
 .container-principal{
-    width: 614px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    background-color: aliceblue;
+    width: 600px
+    
+}
+.sidebar{
+    width: 293px;
 }
 
 .barra-stories{
+    max-width: 550px;
     height: 118px;
     display: flex;
     align-items: center;
@@ -105,7 +109,7 @@ main{
     padding-left: 15px;
 }
 
-.stories_background{
+.stories img{
     background-image: url("stories_background.png");
     height: 66px;
     width: 66px;
@@ -118,6 +122,8 @@ main{
 
 .stories{
     margin: 15px 0;
+    display: flex;
+
 
 }
 .barra-stories ion-icon[name="chevron-forward-circle"]{
@@ -131,7 +137,7 @@ main{
 
 }
 
-.barra-stories img{
+.stories img{
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -139,21 +145,99 @@ main{
 
 }
 
-.username{
-    color: black;
-    font-size: 13px;
+.stories .username{
+    width: 66px;
     display: flax;
     text-overflow: ellipsis;
-}
-.barra-stories .stories .username a{
-    width: 80px;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
+}
+.barra-stories .stories  a{
+    width: 80px;
+    white-space: nowrap;
     margin: 5px 0;
 }
 
+/* fim storie */
 
+/* postagens */
+
+.postagem{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.barra-postagem{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.barra-postagem img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    margin: 13px 14px;
+}
+.postagem-img img{
+    max-width: 550px;
+    
+}
+
+.barra-postagem .user {
+    font-size: 15px;
+    color: #262626;
+    display: flex;
+    text-overflow: ellipsis;
+}
+
+.perfil-user{
+    display: flex;
+    align-items: center;
+}
+.barra-postagem ion-icon{
+    margin:5px 13px;
+    width: 20px; 
+       
+}
+.barra-curtidas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left:10px;
+
+}
+
+.box-icons ion-icon{
+    width: 20px;
+
+}
+.foto-perfil-q-curtiu{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: block;
+    margin: 5px 5px;
+}
+
+.caixa-direita{
+    margin-top: 57px;
+    display: flex;
+    align-items: center;
+    padding: 0px 17px
+}
 
 
 /* COMEÇO INSTAGRAM MOBILE */
