@@ -1,11 +1,15 @@
+import logoInsta from "./assets/logoInsta.png";
+
+
 export default function Navbar() {
+    console.log(logoInsta);
     return (
         <header className="navbar">
             <div className="menu">
                 <div className="logos">
                     <ion-icon name="logo-instagram"></ion-icon>
                     <div className="barra"></div>
-                    <img src={""} />
+                    <img src={logoInsta} />
                 </div>
 
                 <input className="barra-pesquisa" type="text" placeholder="Pesquisar"></input>
