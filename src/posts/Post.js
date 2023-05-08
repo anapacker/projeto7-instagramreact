@@ -1,4 +1,13 @@
+import { useState } from "react"
+
 export default function Post(props){
+    const [postSalvo, setPostSalvo] = useState(false)
+
+    function togleBookMark(){
+     setPostSalvo(!postSalvo)
+    }
+
+
     const imgUsuario = props.imgUsuario
     const username = props.username
     const altUsuario = props.altUsuario
@@ -33,7 +42,7 @@ export default function Post(props){
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
             <div>
-              <ion-icon name="bookmark-outline"></ion-icon>
+              <ion-icon onClick={togleBookMark} name={postSalvo ? "bookmark" : "bookmark-outline"}></ion-icon>
             </div>
           </div>
 
