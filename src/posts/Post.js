@@ -31,7 +31,7 @@ export default function Post(props){
     const numCurtidas = props.numCurtidas
 
     return(
-        <div className="post">
+        <div data-test="post" className="post">
         <div className="topo">
           <div className="usuario">
             <img src={imgUsuario} alt={altUsuario}/>
@@ -43,24 +43,24 @@ export default function Post(props){
         </div>
 
         <div className="conteudo">
-          <img onClick={curtirPostagem} src={caminhoImg} alt={altConteudo}/>
+          <img data-test="post-image" onClick={curtirPostagem} src={caminhoImg} alt={altConteudo}/>
         </div>
 
         <div className="fundo">
           <div className="acoes">
             <div>
-              <ion-icon class={postCurtido ? "vermelho" : ""} onClick={togleCurtida} name={postCurtido ? "heart"  : "heart-outline"}></ion-icon>
+              <ion-icon data-test="like-post" class={postCurtido ? "vermelho" : ""} onClick={togleCurtida} name={postCurtido ? "heart"  : "heart-outline"}></ion-icon>
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
             <div>
-              <ion-icon onClick={togleBookMark} name={postSalvo ? "bookmark" : "bookmark-outline"}></ion-icon>
+              <ion-icon data-test="save-post" onClick={togleBookMark} name={postSalvo ? "bookmark" : "bookmark-outline"}></ion-icon>
             </div>
           </div>
 
           <div className="curtidas">
             <img src={imgCurtidas} alt={altCurtidas}/>
-            <div className="texto">
+            <div data-test="likes-number" className="texto">
               Curtido por <strong>{curtidasUsername}</strong> e <strong>outras {postCurtido ? numCurtidas + 1 : numCurtidas} pessoas</strong>
             </div>
           </div>
