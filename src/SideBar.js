@@ -1,12 +1,36 @@
+import { useState } from "react";
+
 export default function SideBar(){
+  const [nomeUsuario,setNomeUsuario] = useState("catanaComics")
+  const [imgPerfil, setImgPerfil] = useState("../assets/catanacomics.svg")
+
+  console.log("o componente foi renderizado")
+
+  function alterarNome(){
+    const novoNome = prompt("qual o nome do usuario?")
+
+    if(novoNome !== ""){
+      setNomeUsuario(novoNome)
+      console.log(novoNome)
+    } 
+  }
+
+  function alterarImg(){
+    const novaImg = prompt("URL")
+
+    if(novaImg !== ""){
+      setImgPerfil(novaImg)
+    }
+  }
+
     return(
         <div className="sidebar">
         <div className="usuario">
-          <img src="assets/img/catanacomics.svg" alt="imagem de perfil"/>
+          <img onClick={alterarImg} src={imgPerfil} alt="imagem de perfil"/>
           <div className="texto">
             <span>
-              <strong>catanacomics</strong>
-              <ion-icon name="pencil"></ion-icon>
+              <strong>{nomeUsuario}</strong>
+              <ion-icon onClick={alterarNome} name="pencil"></ion-icon>
             </span>
           </div>
         </div>
