@@ -2,10 +2,22 @@ import { useState } from "react"
 
 export default function Post(props){
     const [postSalvo, setPostSalvo] = useState(false)
-
+    const [postCurtido, setPostCurtido] = useState(false)
+    
     function togleBookMark(){
      setPostSalvo(!postSalvo)
     }
+
+    function togleCurtida(){
+      setPostCurtido(!postCurtido)
+      
+    }
+
+    function curtirPostagem(){
+      setPostCurtido(true)
+
+    }
+
 
 
     const imgUsuario = props.imgUsuario
@@ -16,7 +28,7 @@ export default function Post(props){
     const imgCurtidas = props.imgCurtidas
     const curtidasUsername = props.curtidasUsername
     const altCurtidas = props.altCurtidas
-    
+    const numCurtidas = props.numCurtidas
 
     return(
         <div className="post">
@@ -31,13 +43,13 @@ export default function Post(props){
         </div>
 
         <div className="conteudo">
-          <img src={caminhoImg} alt={altConteudo}/>
+          <img onClick={curtirPostagem} src={caminhoImg} alt={altConteudo}/>
         </div>
 
         <div className="fundo">
           <div className="acoes">
             <div>
-              <ion-icon name="heart-outline"></ion-icon>
+              <ion-icon class={postCurtido ? "vermelho" : ""} onClick={togleCurtida} name={postCurtido ? "heart"  : "heart-outline"}></ion-icon>
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
@@ -49,7 +61,7 @@ export default function Post(props){
           <div className="curtidas">
             <img src={imgCurtidas} alt={altCurtidas}/>
             <div className="texto">
-              Curtido por <strong>{curtidasUsername}</strong> e <strong>outras 101.523 pessoas</strong>
+              Curtido por <strong>{curtidasUsername}</strong> e <strong>outras {postCurtido ? numCurtidas + 1 : numCurtidas} pessoas</strong>
             </div>
           </div>
         </div>
