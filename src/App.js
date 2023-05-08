@@ -1,12 +1,13 @@
 import ReactDOM from "react-dom";
-import NavBar from "../NavBar";
-import Corpo from "./Corpo";
 
-function App() {
+import Body from "./Body";
+import NavBar from "./NavBar";
+
+export default function App() {
 	return (
         <div>
             <NavBar/>
-            <Corpo/>
+            <Body/>
         </div>
 
     );
